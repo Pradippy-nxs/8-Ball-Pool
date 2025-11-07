@@ -5,3 +5,19 @@ Step by step how to build SFML:
 - Compile SFML with "mingw32-make"
 - Install the compiled SFML so you can use it in your projects using "mingw32-make install", it should go to either C:\Program Files\SFML or C:\Program Files (x86)\SFML
 - Check if there is an "include" file, it should be "SFML\include", if yes it is ready to be used. If not, the author of this README will explode.
+
+Things to notice:
+- VSCode won't immediately recognize SFML as an "include" lib, to make it recognize your headache-inducing starting phase press ctrl + shift + p and look for "C/CPP: Edit Configurations (JSON)" and press enter. Inside there will be something like:
+
+"includePath": [
+                "${workspaceFolder}/**"
+            ],
+
+Add your SFML include directory to it like: 
+
+"includePath": [
+                "${workspaceFolder}/**",
+                "DISK:\etc\etc\SFML\include"
+            ],
+
+Done, no more squigglies.
