@@ -1,7 +1,0 @@
-# ninja log v7
-68	404	7844131555689437	build.ninja	3d09d12d63b5df57
-68	404	7844131555634438	D:/CodeRelated/CPP/DPBO/Pool/build/cmake_install.cmake	3d09d12d63b5df57
-37	614	7844117436040955	CMakeFiles/test_cmake.dir/main.cpp.obj	9c50bd32aad3c391
-617	945	7844117441840084	test_cmake.exe	63685c5d3726dd2b
-103	1023	7844131610659925	CMakeFiles/test_cmake.dir/main.cpp.obj	e7a49c34a8e8d87
-1027	1277	7844131619892615	test_cmake.exe	89895c7780332e0f
