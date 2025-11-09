@@ -1,0 +1,32 @@
+{
+  "version": 5,
+  "cmakeMinimumRequired": { "major": 3, "minor": 20, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "dev",
+      "displayName": "Development (no SFML)",
+      "generator": "Ninja",
+      "binaryDir": "build/dev",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BILLIARD_WITH_SFML": "OFF",
+        "BILLIARD_BUILD_TESTS": "OFF"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release (no SFML)",
+      "generator": "Ninja",
+      "binaryDir": "build/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "BILLIARD_WITH_SFML": "OFF",
+        "BILLIARD_BUILD_TESTS": "OFF"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "dev-build", "configurePreset": "dev" },
+    { "name": "release-build", "configurePreset": "release" }
+  ]
+}
