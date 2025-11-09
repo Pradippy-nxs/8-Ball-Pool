@@ -1,46 +1,11 @@
-cmake_minimum_required(VERSION 3.20)
-project(BilliardGame LANGUAGES CXX)
+cmake_minimum_required(VERSION "4.1.2")
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-option(BILLIARD_WITH_SFML "Enable SFML backend (adapters only, optional)" OFF)
-option(BILLIARD_BUILD_TESTS "Build unit tests" OFF)
-option(BILLIARD_WARN_AS_ERROR "Treat warnings as errors" OFF)
+project("test_cmake")
 
-if(MSVC)
-    add_compile_options(/W4)
-else()
-    add_compile_options(-Wall -Wextra -Wpedantic -Wconversion -Wunreachable-code)
-endif()
+include_directories("D:\\CodeRelated\\CPP_Compiler\\Libraries\\Finished\\SFML\\include")
+link_directories("D:\\CodeRelated\\CPP_Compiler\\Libraries\\Finished\\SFML\\lib")
 
-if(BILLIARD_WARN_AS_ERROR)
-    if(MSVC)
-        add_compile_options(/WX)
-    else()
-        add_compile_options(-Werror)
-    endif()
-endif()
+add_executable(test_cmake main.cpp)
 
-add_library(billiard_core
-    src/core/Version.cpp
-)
-target_include_directories(billiard_core PUBLIC include)
-
-if(BILLIARD_WITH_SFML)
-    target_compile_definitions(billiard_core PUBLIC BILLIARD_WITH_SFML=1)
-endif()
-
-add_executable(billiard_game
-    src/main.cpp
-)
-target_link_libraries(billiard_game PRIVATE billiard_core)
-
-if(BILLIARD_WITH_SFML)
-    find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
-endif()
-
-if(BILLIARD_BUILD_TESTS)
-    enable_testing()
-endif()
+target_link_libraries(test_cmake sfml-graphics-s sfml-window-s sfml-system-s)

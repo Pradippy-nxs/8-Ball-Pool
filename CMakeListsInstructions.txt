@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION "4.1.2")
+
+project("NAMA PROJEK")
+
+include_directories("path ke SFML/include")
+
+link_directories("path ke SFML/lib")
+
+add_executable(NAMA PROJEK main.cpp)
+
+target_link_libraries(NAMA PROJEK modul1 modul2 etc...)
