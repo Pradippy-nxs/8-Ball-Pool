@@ -6,6 +6,8 @@ include_directories("path ke SFML/include")
 
 link_directories("path ke SFML/lib")
 
+add_definitions(-DSFML_STATIC)
+
 add_executable(NAMA PROJEK main.cpp)
 
-target_link_libraries(NAMA PROJEK modul1 modul2 etc...)
+target_link_libraries(NAMA PROJEK sfml-graphics-s sfml-window-s sfml-system-s freetype harfbuzz opengl32 winmm gdi32 ws2_32)

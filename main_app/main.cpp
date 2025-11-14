@@ -1,7 +1,7 @@
-#include <SFML/Graphics.hpp>
-
-#include <iostream>
+#include "ENTITIES/Game.h"
 
 int main(){
-    std::cout << "Test Cmake Haloooo" << std::endl;
+    Game* game_ptr = new Game;
+
+    game_ptr->render_window();
 }
