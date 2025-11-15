@@ -20,11 +20,10 @@ void Game::render_window(){
  
     // Resizing the texture to fit the window
     sprite.setScale({scale_x,scale_y});
-
-    // Create a graphical text to display
-    // const sf::Font font("arial.ttf");
-    // sf::Text text(font, "Hello SFML", 50);
  
+    // Ball rendering
+    
+
     // Start the game loop
     while (window.isOpen())
     {
@@ -41,9 +40,6 @@ void Game::render_window(){
  
         // Draw the sprite
         window.draw(sprite);
- 
-        // Draw the string
-        // window.draw(text);
  
         // Update the window
         window.display();

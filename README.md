@@ -1,4 +1,5 @@
 Struktur File:
+```
 project-root/
 ├── asset/
 ├── build/ *Setelah build pake CMake*
@@ -35,3 +36,4 @@ project-root/
 ├── CMakeLists.txt *Jangan lupa bikin ya*
 ├── CMakeListsInstructions.txt
 └── INSTRUCTIONS.md
+```
