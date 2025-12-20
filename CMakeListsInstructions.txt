@@ -8,6 +8,8 @@ link_directories("path ke SFML/lib")
 
 add_definitions(-DSFML_STATIC)
 
-add_executable(NAMA PROJEK main.cpp)
+add_executable(NAMA PROJEK main_app/main.cpp main_app/ENTITIES/Game.cpp main_app/ENTITIES/Table.cpp main_app/ENTITIES/Ball.cpp main_app/ENTITIES/Cue.cpp main_app/ENTITIES/Player.cpp)
 
-target_link_libraries(NAMA PROJEK sfml-graphics-s sfml-window-s sfml-system-s freetype harfbuzz opengl32 winmm gdi32 ws2_32)
+target_link_options(NAMA PROJEK PRIVATE "-static")
+
+target_link_libraries(NAMA PROJEK sfml-audio-s sfml-graphics-s sfml-window-s sfml-system-s flac vorbisenc vorbisfile vorbis ogg freetype harfbuzz opengl32 winmm gdi32 ws2_32)
